@@ -83,7 +83,7 @@ final hubConfig = HubConfig(
       'Chơi, nghe, đọc: học nhạc qua trò chơi',
       'Tumugtog, makinig, magbasa: matuto ng musika sa laro',
     ],
-  seedColor: const Color(0xFF6C8FD8),
+  seedColor: const Color(0xFFB639D9),
   icon: Icons.music_note,
   games: [
     gunlukRitimConfig,
