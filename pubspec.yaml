@@ -18,35 +18,35 @@ dependencies:
   oyun_gunluk_ritim:
     git:
       url: https://github.com/taktemurr-ops/oyun-gunluk-ritim
-      ref: main
+      ref: 5a19e61d8bad3d6682c436d0f2356e8956423620
   oyun_nota_karolari:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-karolari
-      ref: main
+      ref: ec41936412afc40970131147308dcac9f44631de
   oyun_ritim_vurusu:
     git:
       url: https://github.com/taktemurr-ops/oyun-ritim-vurusu
-      ref: main
+      ref: 71e30857cf177f195bbc1c4d0cf5a70eff47e7a9
   oyun_davul_dersi:
     git:
       url: https://github.com/taktemurr-ops/oyun-davul-dersi
-      ref: main
+      ref: 38db53760b18eb24ef12810ed1e2a0a9004add6c
   oyun_kulak_egitimi:
     git:
       url: https://github.com/taktemurr-ops/oyun-kulak-egitimi
-      ref: main
+      ref: 0b2e769c3832df6f7198473969afba150a2d0218
   oyun_gitar_akorlari:
     git:
       url: https://github.com/taktemurr-ops/oyun-gitar-akorlari
-      ref: main
+      ref: 49cdcbeaf70264f8dba8812d58c3c37aa952b801
   oyun_nota_ogrenme:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-ogrenme
-      ref: main
+      ref: f498d82ca5be879a152d2396fc014c7b46497050
   oyun_melodi_hafizasi:
     git:
       url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
-      ref: main
+      ref: 8741a32c672036bedc6465732dc7ebfa1e734845
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
@@ -64,7 +64,7 @@ dependency_overrides:
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
-      ref: main
+      ref: 4152f21ce4fa1613f798ad50127e63fc52ceabcf
 
 dev_dependencies:
   flutter_test:
