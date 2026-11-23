@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:oyun_akort/oyun_akort.dart';
 import 'package:oyun_davul_dersi/oyun_davul_dersi.dart';
+import 'package:oyun_ezgi_bahcesi/oyun_ezgi_bahcesi.dart';
 import 'package:oyun_gitar_akorlari/oyun_gitar_akorlari.dart';
 import 'package:oyun_gunluk_ritim/oyun_gunluk_ritim.dart';
 import 'package:oyun_kulak_egitimi/oyun_kulak_egitimi.dart';
+import 'package:oyun_makam_yolculugu/oyun_makam_yolculugu.dart';
 import 'package:oyun_melodi_hafizasi/oyun_melodi_hafizasi.dart';
 import 'package:oyun_nota_karolari/oyun_nota_karolari.dart';
 import 'package:oyun_nota_ogrenme/oyun_nota_ogrenme.dart';
@@ -90,12 +93,29 @@ final hubConfig = HubConfig(
     notaKarolariConfig,
     ritimVurusuConfig,
     davulDersiConfig,
+    ezgiBahcesiConfig,
     kulakEgitimiConfig,
+    makamYolculuguConfig,
+    akortConfig,
     gitarAkorlariConfig,
     notaOgrenmeConfig,
     melodiHafizasiConfig,
   ],
   starters: ['oyun-gunluk-ritim', 'oyun-nota-karolari', 'oyun-davul-dersi'],
+  covers: const {
+    'oyun-gunluk-ritim': GameCover('dailyc'),
+    'oyun-nota-karolari': GameCover('tilesc'),
+    'oyun-ritim-vurusu': GameCover('beatc'),
+    'oyun-davul-dersi': GameCover('drumc'),
+    'oyun-ezgi-bahcesi': GameCover('gardenc'),
+    'oyun-kulak-egitimi': GameCover('earc'),
+    'oyun-makam-yolculugu': GameCover('makamc'),
+    'oyun-akort': GameCover('akortc'),
+    'oyun-gitar-akorlari': GameCover('guitarc'),
+    'oyun-nota-ogrenme': GameCover('staffc'),
+    'oyun-melodi-hafizasi': GameCover('melodyc'),
+  },
+  defaultCover: const GameCover('beatc', v: 1),
   sections: [
     HubSection(
         title: [
@@ -170,7 +190,7 @@ final hubConfig = HubConfig(
           'Chơi',
           'Tumugtog',
         ],
-        ids: ['oyun-nota-karolari', 'oyun-ritim-vurusu', 'oyun-davul-dersi']),
+        ids: ['oyun-nota-karolari', 'oyun-ritim-vurusu', 'oyun-davul-dersi', 'oyun-ezgi-bahcesi']),
     HubSection(
         title: [
           'Öğren',
@@ -207,7 +227,7 @@ final hubConfig = HubConfig(
           'Học',
           'Matuto',
         ],
-        ids: ['oyun-kulak-egitimi', 'oyun-gitar-akorlari', 'oyun-nota-ogrenme', 'oyun-melodi-hafizasi']),
+        ids: ['oyun-kulak-egitimi', 'oyun-makam-yolculugu', 'oyun-akort', 'oyun-gitar-akorlari', 'oyun-nota-ogrenme', 'oyun-melodi-hafizasi']),
   ],
 );
 

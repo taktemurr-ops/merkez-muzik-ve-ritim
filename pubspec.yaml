@@ -13,40 +13,52 @@ dependencies:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: c940d60fdcbb22f7f737de465f2ed0c89de3a6b7
+      ref: 921df6392b2121ffd438a286673ef9f10c988273
   # Merkezdeki oyunlar (her biri kendi deposunda)
   oyun_gunluk_ritim:
     git:
       url: https://github.com/taktemurr-ops/oyun-gunluk-ritim
-      ref: 79d2497cb6dbecdc5891d60a6fc5c8359b7d6c86
+      ref: main
   oyun_nota_karolari:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-karolari
-      ref: 1d8edfb881244950e2ca12f61b371bee9bc6a94f
+      ref: main
   oyun_ritim_vurusu:
     git:
       url: https://github.com/taktemurr-ops/oyun-ritim-vurusu
-      ref: 4ae5c465407846feaeb97c8ddb254d0870b45139
+      ref: main
   oyun_davul_dersi:
     git:
       url: https://github.com/taktemurr-ops/oyun-davul-dersi
-      ref: a59116ea4e2873ee81f3ee20015eceb1e2bea354
+      ref: main
+  oyun_ezgi_bahcesi:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-ezgi-bahcesi
+      ref: main
   oyun_kulak_egitimi:
     git:
       url: https://github.com/taktemurr-ops/oyun-kulak-egitimi
-      ref: dcf0234145304c5a4dbaf808b4656bc1a7fedf1b
+      ref: main
+  oyun_makam_yolculugu:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-makam-yolculugu
+      ref: main
+  oyun_akort:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-akort
+      ref: main
   oyun_gitar_akorlari:
     git:
       url: https://github.com/taktemurr-ops/oyun-gitar-akorlari
-      ref: 705a026c0ac65b22a11d82d108628bb02a01425a
+      ref: main
   oyun_nota_ogrenme:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-ogrenme
-      ref: a4f43fff5d511f1c9ba43bdcc2442f9c754d45ba
+      ref: main
   oyun_melodi_hafizasi:
     git:
       url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
-      ref: 6df47a1cab2eceaf2fdd38b859c958c9eb5c2cc8
+      ref: main
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
@@ -60,11 +72,11 @@ dependency_overrides:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: c940d60fdcbb22f7f737de465f2ed0c89de3a6b7
+      ref: 921df6392b2121ffd438a286673ef9f10c988273
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
-      ref: dfa030e6760f8fc11d91bfbb161f15f1a08a0d3d
+      ref: main
 
 dev_dependencies:
   flutter_test:
