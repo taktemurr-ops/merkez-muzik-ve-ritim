@@ -13,52 +13,52 @@ dependencies:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 921df6392b2121ffd438a286673ef9f10c988273
+      ref: 05acd1e648dcb04c962281272f3fb806fc9ccc99
   # Merkezdeki oyunlar (her biri kendi deposunda)
   oyun_gunluk_ritim:
     git:
       url: https://github.com/taktemurr-ops/oyun-gunluk-ritim
-      ref: main
+      ref: 79d2497cb6dbecdc5891d60a6fc5c8359b7d6c86
   oyun_nota_karolari:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-karolari
-      ref: main
+      ref: 1d8edfb881244950e2ca12f61b371bee9bc6a94f
   oyun_ritim_vurusu:
     git:
       url: https://github.com/taktemurr-ops/oyun-ritim-vurusu
-      ref: main
+      ref: 4ae5c465407846feaeb97c8ddb254d0870b45139
   oyun_davul_dersi:
     git:
       url: https://github.com/taktemurr-ops/oyun-davul-dersi
-      ref: main
+      ref: a59116ea4e2873ee81f3ee20015eceb1e2bea354
   oyun_ezgi_bahcesi:
     git:
       url: https://github.com/taktemurr-ops/oyun-ezgi-bahcesi
-      ref: main
+      ref: 906bdd2b62ae8a34742a4bbd7fe674ad81dfcec4
   oyun_kulak_egitimi:
     git:
       url: https://github.com/taktemurr-ops/oyun-kulak-egitimi
-      ref: main
+      ref: dcf0234145304c5a4dbaf808b4656bc1a7fedf1b
   oyun_makam_yolculugu:
     git:
       url: https://github.com/taktemurr-ops/oyun-makam-yolculugu
-      ref: main
+      ref: ede9407d73d12d159820419c6918724bd03d7939
   oyun_akort:
     git:
       url: https://github.com/taktemurr-ops/oyun-akort
-      ref: main
+      ref: f29dd479af53930489a8b5f1104d2492f89ead8e
   oyun_gitar_akorlari:
     git:
       url: https://github.com/taktemurr-ops/oyun-gitar-akorlari
-      ref: main
+      ref: 705a026c0ac65b22a11d82d108628bb02a01425a
   oyun_nota_ogrenme:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-ogrenme
-      ref: main
+      ref: a4f43fff5d511f1c9ba43bdcc2442f9c754d45ba
   oyun_melodi_hafizasi:
     git:
       url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
-      ref: main
+      ref: 6df47a1cab2eceaf2fdd38b859c958c9eb5c2cc8
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
@@ -72,11 +72,11 @@ dependency_overrides:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 921df6392b2121ffd438a286673ef9f10c988273
+      ref: 05acd1e648dcb04c962281272f3fb806fc9ccc99
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
-      ref: main
+      ref: 79f58234bfec22180e377040a16d80b9344c50d3
 
 dev_dependencies:
   flutter_test:
