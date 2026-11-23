@@ -1,0 +1,106 @@
+name: merkez_muzik_ve_ritim
+description: "Müzik ve Ritim merkez uygulaması. Offline-first Flutter game for Android, iOS and Web."
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Ortak çekirdek: https://github.com/taktemurr-ops/studio-core
+  studio_core:
+    git:
+      url: https://github.com/taktemurr-ops/studio-core
+      ref: 921df6392b2121ffd438a286673ef9f10c988273
+  # Merkezdeki oyunlar (her biri kendi deposunda)
+  oyun_gunluk_ritim:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-gunluk-ritim
+      ref: main
+  oyun_nota_karolari:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-nota-karolari
+      ref: main
+  oyun_ritim_vurusu:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-ritim-vurusu
+      ref: main
+  oyun_davul_dersi:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-davul-dersi
+      ref: main
+  oyun_kulak_egitimi:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-kulak-egitimi
+      ref: main
+  oyun_gitar_akorlari:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-gitar-akorlari
+      ref: main
+  oyun_nota_ogrenme:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-nota-ogrenme
+      ref: main
+  oyun_melodi_hafizasi:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
+      ref: main
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  shared_preferences: ^2.3.2
+  audioplayers: ^6.5.0
+  google_mobile_ads: ^9.2.0
+  in_app_purchase: ^3.2.0
+
+dependency_overrides:
+  # Tüm oyunlar aynı çekirdek ve motor sürümlerini kullansın.
+  studio_core:
+    git:
+      url: https://github.com/taktemurr-ops/studio-core
+      ref: 921df6392b2121ffd438a286673ef9f10c988273
+  muzik_motoru:
+    git:
+      url: https://github.com/taktemurr-ops/muzik-motoru
+      ref: main
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sfx/
+    - assets/config/
+    - assets/branding/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: assets/branding/icon.png
+  adaptive_icon_background: "#1F2A44"
+  adaptive_icon_foreground: assets/branding/icon_foreground.png
+  web:
+    generate: true
+    image_path: assets/branding/icon.png
+    background_color: "#1F2A44"
+    theme_color: "#1F2A44"
+
+flutter_native_splash:
+  color: "#1F2A44"
+  image: assets/branding/splash.png
+  android_12:
+    color: "#1F2A44"
+    image: assets/branding/splash_android12.png
+  web: true
