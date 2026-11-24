@@ -10,7 +10,7 @@ import 'package:oyun_melodi_hafizasi/oyun_melodi_hafizasi.dart';
 import 'package:oyun_nota_karolari/oyun_nota_karolari.dart';
 import 'package:oyun_nota_ogrenme/oyun_nota_ogrenme.dart';
 import 'package:oyun_ritim_vurusu/oyun_ritim_vurusu.dart';
-import 'approved_hub.dart';
+import 'package:studio_core/app/hub.dart';
 
 /// Müzik ve Ritim: nota karoları, ritim, davul, kulak eğitimi, gitar akorları,
 /// nota okuma ve melodi hafızasını tek uygulamada toplar. Her oyunun kaydı ayrıdır.
@@ -86,7 +86,7 @@ final hubConfig = HubConfig(
       'Chơi, nghe, đọc: học nhạc qua trò chơi',
       'Tumugtog, makinig, magbasa: matuto ng musika sa laro',
     ],
-  seedColor: const Color(0xFFB639D9),
+  seedColor: const Color(0xFF6C8FD8),
   icon: Icons.music_note,
   games: [
     gunlukRitimConfig,
