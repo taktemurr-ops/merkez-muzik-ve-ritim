@@ -10,7 +10,10 @@ import 'package:oyun_melodi_hafizasi/oyun_melodi_hafizasi.dart';
 import 'package:oyun_nota_karolari/oyun_nota_karolari.dart';
 import 'package:oyun_nota_ogrenme/oyun_nota_ogrenme.dart';
 import 'package:oyun_ritim_vurusu/oyun_ritim_vurusu.dart';
+import 'package:studio_core/app/approved_hub.dart';
 import 'package:studio_core/app/hub.dart';
+
+import 'approved_style.dart';
 
 /// Müzik ve Ritim: nota karoları, ritim, davul, kulak eğitimi, gitar akorları,
 /// nota okuma ve melodi hafızasını tek uygulamada toplar. Her oyunun kaydı ayrıdır.
@@ -231,4 +234,4 @@ final hubConfig = HubConfig(
   ],
 );
 
-void main() => bootstrapHub(hubConfig);
+void main() => bootstrapApprovedHub(hubConfig, approvedStyle);
