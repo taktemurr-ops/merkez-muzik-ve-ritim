@@ -13,7 +13,7 @@ dependencies:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 7616c8255fb3d54fad127c324ae0ae7a03b27a6a
+      ref: f730839949a9fc1ad4e685a525a41a02d9873757
   # Merkezdeki oyunlar (her biri kendi deposunda)
   oyun_gunluk_ritim:
     git:
@@ -39,6 +39,14 @@ dependencies:
     git:
       url: https://github.com/taktemurr-ops/oyun-kulak-egitimi
       ref: dcf0234145304c5a4dbaf808b4656bc1a7fedf1b
+  oyun_ritim_diktesi:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-ritim-diktesi
+      ref: e82d2a030a13646232eb5d6f3591dcbcaa18e61d
+  oyun_ton_tutma:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-ton-tutma
+      ref: ce2c4239b839ef16b4f883ba76448014c5d50661
   oyun_makam_yolculugu:
     git:
       url: https://github.com/taktemurr-ops/oyun-makam-yolculugu
@@ -72,11 +80,11 @@ dependency_overrides:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 7616c8255fb3d54fad127c324ae0ae7a03b27a6a
+      ref: f730839949a9fc1ad4e685a525a41a02d9873757
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
-      ref: 79f58234bfec22180e377040a16d80b9344c50d3
+      ref: d9b2257485ed9c5cd2fe1a4b4a9bf04cb4e95373
 
 dev_dependencies:
   flutter_test:
