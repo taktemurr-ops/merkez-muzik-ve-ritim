@@ -13,7 +13,7 @@ dependencies:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 14dac3f9192e77fda961b85d5bc33d2effb12f4d
+      ref: 7616c8255fb3d54fad127c324ae0ae7a03b27a6a
   # Merkezdeki oyunlar (her biri kendi deposunda)
   oyun_gunluk_ritim:
     git:
@@ -54,7 +54,7 @@ dependencies:
   oyun_nota_ogrenme:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-ogrenme
-      ref: a4f43fff5d511f1c9ba43bdcc2442f9c754d45ba
+      ref: 63f33f964c135e0b99897946774fa7bedd79b7a6
   oyun_melodi_hafizasi:
     git:
       url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
@@ -72,7 +72,7 @@ dependency_overrides:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 14dac3f9192e77fda961b85d5bc33d2effb12f4d
+      ref: 7616c8255fb3d54fad127c324ae0ae7a03b27a6a
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
