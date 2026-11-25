@@ -2,7 +2,7 @@ A Zene és Ritmus 11 zenei játékot gyűjt egybe: játssz közkincs klasszikuso
 
 • Minden nap: Napi Ritmus
 • Játssz: Hanglapok, Ritmusgyűrűk, Doboklecke, Dallamkert
-• Tanulj: Hallásfejlesztés, Makám-utazás, Hangold, Gitárakkordok, Kottaolvasás, Dallammemória
+• Tanulj: Hallásfejlesztés, Makám-utazás, Hangold, Gitárakkordok, Lapról olvasás, Dallammemória
 
 Kiemelt
 • Játékonként 100 000 szint; dallamok, ritmusok és kérdések generáltak, minden szint ellenőrzött. Nincs védett dal: a klasszikusok 1929 előttiek.

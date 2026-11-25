@@ -2,7 +2,7 @@ Müzik ve Ritim, 11 müzik oyununu tek uygulamada toplar: inen karolarla telifsi
 
 • Her gün: Günlük Ritim
 • Çal: Nota Karoları, Ritim Vuruşu, Davul Dersi, Ezgi Bahçesi
-• Öğren: Kulak Eğitimi, Makam Yolculuğu, Akort, Gitar Akorları, Nota Okuma, Melodi Hafızası
+• Öğren: Kulak Eğitimi, Makam Yolculuğu, Akort, Gitar Akorları, Deşifre Antrenmanı, Melodi Hafızası
 
 Öne çıkanlar
 • Oyun başına 100.000 bölüm; ezgiler, ritimler ve sorular üretilir, her bölüm kurallara göre denetlenir. Telifli şarkı yoktur: klasikler 1929 öncesi eserlerdir.

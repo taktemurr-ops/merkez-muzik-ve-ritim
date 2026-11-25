@@ -15,7 +15,7 @@ Telifli şarkı yoktur: Nota Karoları'ndaki klasikler 1929 öncesi eserler ve h
 | Makam Yolculuğu | [oyun-makam-yolculugu](https://github.com/taktemurr-ops/oyun-makam-yolculugu) |
 | Akort | [oyun-akort](https://github.com/taktemurr-ops/oyun-akort) |
 | Gitar Akorları | [oyun-gitar-akorlari](https://github.com/taktemurr-ops/oyun-gitar-akorlari) |
-| Nota Okuma | [oyun-nota-ogrenme](https://github.com/taktemurr-ops/oyun-nota-ogrenme) |
+| Deşifre Antrenmanı | [oyun-nota-ogrenme](https://github.com/taktemurr-ops/oyun-nota-ogrenme) |
 | Melodi Hafızası | [oyun-melodi-hafizasi](https://github.com/taktemurr-ops/oyun-melodi-hafizasi) |
 
 Test APK: https://github.com/taktemurr-ops/merkez-muzik-ve-ritim/releases/download/test/merkez-muzik-ve-ritim.apk
