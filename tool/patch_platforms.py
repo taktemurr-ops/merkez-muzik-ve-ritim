@@ -8,6 +8,9 @@
 * iOS: display name, AdMob id, SKAdNetwork, tracking text, iOS 14+,
   universal app (iPhone + iPad, every iPad orientation, Split View /
   Stage Manager), App Transport Security kept strict.
+* Microphone (Ton Tutma / Pitch Match only): Android RECORD_AUDIO (microphone
+  not required), iOS NSMicrophoneUsageDescription with InfoPlist.strings in
+  33 languages. The game asks first in-app; nothing is recorded or stored.
 * Web: title, description, PWA manifest (any orientation, standalone),
   referrer policy.
 
@@ -26,6 +29,44 @@ ADMOB_ANDROID = os.environ.get("ADMOB_APP_ID_ANDROID") or "ca-app-pub-3940256099
 ADMOB_IOS = os.environ.get("ADMOB_APP_ID_IOS") or "ca-app-pub-3940256099942544~1458002511"
 
 
+# Mikrofon izni açıklaması (33 dil; iOS izin penceresinde gösterilir).
+MIC_TEXTS = [
+    ('tr', 'Ton Tutma, söylediğin ya da çaldığın sesin perdesini ölçmek için mikrofonu yalnızca oyun sırasında dinler. Ses kaydedilmez, saklanmaz ve cihazdan çıkmaz.'),
+    ('en', 'Pitch Match listens to the microphone only while you play, to measure the pitch you sing or play. Nothing is recorded, stored or sent off the device.'),
+    ('de', 'Ton treffen hört das Mikrofon nur während des Spiels ab, um die Tonhöhe deines Gesangs oder Spiels zu messen. Nichts wird aufgenommen, gespeichert oder vom Gerät gesendet.'),
+    ('es', 'Afina tu voz escucha el micrófono solo mientras juegas, para medir la altura de lo que cantas o tocas. No se graba, guarda ni envía nada fuera del dispositivo.'),
+    ('fr', 'Juste note n’écoute le micro que pendant la partie, pour mesurer la hauteur de ce que vous chantez ou jouez. Rien n’est enregistré, conservé ni envoyé hors de l’appareil.'),
+    ('ar', 'تستمع اللعبة إلى الميكروفون أثناء اللعب فقط لقياس طبقة ما تغنيه أو تعزفه. لا يُسجَّل شيء ولا يُحفظ ولا يغادر الجهاز.'),
+    ('fa', 'این بازی فقط هنگام بازی به میکروفون گوش می\u200cدهد تا زیر و بمی صدایی را که می\u200cخوانی یا می\u200cنوازی بسنجد. چیزی ضبط، ذخیره یا از دستگاه خارج نمی\u200cشود.'),
+    ('he', 'המשחק מאזין למיקרופון רק בזמן המשחק כדי למדוד את גובה הצליל שאתם שרים או מנגנים. שום דבר לא מוקלט, נשמר או יוצא מהמכשיר.'),
+    ('ur', 'یہ کھیل صرف کھیلتے وقت مائیک سنتا ہے تاکہ آپ کے گائے یا بجائے سُر کی اونچائی ناپے۔ کچھ ریکارڈ، محفوظ یا آلے سے باہر نہیں بھیجا جاتا۔'),
+    ('ru', 'Игра слушает микрофон только во время игры, чтобы измерить высоту вашего пения или игры. Ничего не записывается, не сохраняется и не покидает устройство.'),
+    ('uk', 'Гра слухає мікрофон лише під час гри, щоб виміряти висоту вашого співу чи гри. Нічого не записується, не зберігається й не залишає пристрій.'),
+    ('pl', 'Gra słucha mikrofonu tylko podczas rozgrywki, by zmierzyć wysokość śpiewu lub gry. Nic nie jest nagrywane, zapisywane ani wysyłane z urządzenia.'),
+    ('cs', 'Hra poslouchá mikrofon jen během hraní, aby změřila výšku tvého zpěvu či hry. Nic se nenahrává, neukládá ani neodesílá ze zařízení.'),
+    ('ro', 'Jocul ascultă microfonul doar în timpul jocului, ca să măsoare înălțimea a ceea ce cânți. Nimic nu este înregistrat, păstrat sau trimis din dispozitiv.'),
+    ('hu', 'A játék csak játék közben hallgatja a mikrofont, hogy megmérje az énekelt vagy játszott hang magasságát. Semmi sem kerül rögzítésre, tárolásra vagy az eszközön kívülre.'),
+    ('el', 'Το παιχνίδι ακούει το μικρόφωνο μόνο κατά το παιχνίδι, για να μετρήσει το τονικό ύψος. Τίποτα δεν ηχογραφείται, δεν αποθηκεύεται ούτε φεύγει από τη συσκευή.'),
+    ('it', 'Il gioco ascolta il microfono solo mentre giochi, per misurare l’altezza di ciò che canti o suoni. Nulla viene registrato, salvato o inviato fuori dal dispositivo.'),
+    ('pt', 'O jogo ouve o microfone só enquanto você joga, para medir a altura do que canta ou toca. Nada é gravado, guardado ou enviado para fora do aparelho.'),
+    ('nl', 'Het spel luistert alleen tijdens het spelen naar de microfoon om de toonhoogte te meten. Er wordt niets opgenomen, bewaard of van het apparaat verstuurd.'),
+    ('sv', 'Spelet lyssnar på mikrofonen bara medan du spelar, för att mäta tonhöjden. Inget spelas in, sparas eller lämnar enheten.'),
+    ('da', 'Spillet lytter kun til mikrofonen, mens du spiller, for at måle tonehøjden. Intet optages, gemmes eller sendes fra enheden.'),
+    ('nb', 'Spillet lytter bare til mikrofonen mens du spiller, for å måle tonehøyden. Ingenting tas opp, lagres eller sendes fra enheten.'),
+    ('fi', 'Peli kuuntelee mikrofonia vain pelin aikana mitatakseen laulamasi tai soittamasi sävelen korkeuden. Mitään ei tallenneta eikä lähetetä laitteesta.'),
+    ('ja', '歌ったり弾いたりした音の高さを測るため、プレイ中だけマイクを使います。録音・保存・送信は一切しません。'),
+    ('ko', '부르거나 연주한 음의 높이를 재기 위해 게임 중에만 마이크를 들어요. 녹음·저장·전송은 하지 않아요.'),
+    ('zh-Hans', '仅在游戏时监听麦克风，用来测量你唱或奏出的音高。不会录音、保存或发送到设备之外。'),
+    ('hi', 'आपके गाए या बजाए सुर की ऊँचाई मापने के लिए खेल के दौरान ही माइक सुना जाता है। कुछ भी रिकॉर्ड, सहेजा या डिवाइस से बाहर नहीं भेजा जाता।'),
+    ('bn', 'আপনার গাওয়া বা বাজানো সুরের উচ্চতা মাপতে শুধু খেলার সময় মাইক শোনা হয়। কিছুই রেকর্ড, সংরক্ষণ বা ডিভাইসের বাইরে পাঠানো হয় না।'),
+    ('id', 'Game ini mendengarkan mikrofon hanya saat bermain untuk mengukur tinggi nada yang kamu nyanyikan atau mainkan. Tidak ada yang direkam, disimpan, atau dikirim keluar perangkat.'),
+    ('ms', 'Permainan ini mendengar mikrofon hanya semasa bermain untuk mengukur ketinggian nada. Tiada apa yang dirakam, disimpan atau dihantar keluar peranti.'),
+    ('th', 'เกมฟังไมโครโฟนเฉพาะขณะเล่น เพื่อวัดระดับเสียงที่คุณร้องหรือเล่น ไม่มีการบันทึก เก็บ หรือส่งออกจากเครื่อง'),
+    ('vi', 'Trò chơi chỉ nghe micro khi đang chơi để đo cao độ bạn hát hoặc chơi. Không ghi âm, không lưu và không gửi ra khỏi thiết bị.'),
+    ('fil', 'Nakikinig lang ang laro sa mikropono habang naglalaro para sukatin ang taas ng tono. Walang nire-record, sine-save, o ipinapadala palabas ng device.'),
+]
+
+
 def read(p):
     with open(p, encoding="utf-8") as f:
         return f.read()
@@ -41,6 +82,15 @@ def android():
     if os.path.exists(man):
         s = read(man)
         s = re.sub(r'android:label="[^"]*"', 'android:label="%s"' % APP_NAME_XML, s, count=1)
+        # Ton Tutma: mikrofon yalnızca oyun açıkken, önce uygulama içi açıklamayla istenir.
+        if "android.permission.RECORD_AUDIO" not in s:
+            s = s.replace("<application", '<uses-permission android:name="android.permission.RECORD_AUDIO"/>\n    <application', 1)
+        if "android.hardware.microphone" not in s:
+            s = s.replace(
+                "<application",
+                '<uses-feature android:name="android.hardware.microphone" android:required="false"/>\n    <application',
+                1,
+            )
         # Every screen size + resizable windows (tablets, foldables, ChromeOS).
         if "<supports-screens" not in s:
             s = s.replace(
@@ -198,6 +248,8 @@ def ios():
             extra += "\t<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>\n\t<false/>\n"
         if "FirebaseCrashlyticsCollectionEnabled" not in s:
             extra += "\t<key>FirebaseCrashlyticsCollectionEnabled</key>\n\t<false/>\n"
+        if "NSMicrophoneUsageDescription" not in s:
+            extra += "\t<key>NSMicrophoneUsageDescription</key>\n\t<string>%s</string>\n" % MIC_TEXTS[1][1].replace("&", "&amp;")
         if "ITSAppUsesNonExemptEncryption" not in s:
             extra += "\t<key>ITSAppUsesNonExemptEncryption</key>\n\t<false/>\n"
         if extra:
@@ -213,9 +265,68 @@ def ios():
     if os.path.exists(pbx):
         s = read(pbx)
         s = re.sub(r"IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;", "IPHONEOS_DEPLOYMENT_TARGET = 15.0;", s)
+        s = ios_mic_strings(s)
         # Universal app: iPhone (1) + iPad (2).
         s = re.sub(r'TARGETED_DEVICE_FAMILY = "?[0-9,]+"?;', 'TARGETED_DEVICE_FAMILY = "1,2";', s)
         write(pbx, s)
+
+
+def ios_mic_strings(pbx):
+    """Mikrofon açıklamasını 33 dilde InfoPlist.strings olarak ekler ve projeye kaydeder."""
+    for lang, text in MIC_TEXTS:
+        d = "ios/Runner/%s.lproj" % lang
+        os.makedirs(d, exist_ok=True)
+        esc = text.replace("\\", "\\\\").replace('"', '\\"')
+        write(d + "/InfoPlist.strings", '"NSMicrophoneUsageDescription" = "%s";\n' % esc)
+    if "InfoPlist.strings in Resources" in pbx:
+        return pbx
+    import hashlib
+
+    def uid(x):
+        return hashlib.md5(("gs100-" + x).encode()).hexdigest()[:24].upper()
+
+    vg, bf = uid("variant"), uid("buildfile")
+    refs = [(uid("ref-" + l), l) for l, _ in MIC_TEXTS]
+    pbx = pbx.replace(
+        "/* Begin PBXBuildFile section */\n",
+        "/* Begin PBXBuildFile section */\n\t\t%s /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = %s /* InfoPlist.strings */; };\n" % (bf, vg),
+        1,
+    )
+    pbx = pbx.replace(
+        "/* Begin PBXFileReference section */\n",
+        "/* Begin PBXFileReference section */\n"
+        + "".join(
+            '\t\t%s /* %s */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = %s; path = %s; sourceTree = "<group>"; };\n'
+            % (r, l, '"%s"' % l if "-" in l else l, '"%s.lproj/InfoPlist.strings"' % l if "-" in l else "%s.lproj/InfoPlist.strings" % l)
+            for r, l in refs
+        ),
+        1,
+    )
+    pbx = pbx.replace(
+        "/* Begin PBXVariantGroup section */\n",
+        "/* Begin PBXVariantGroup section */\n\t\t%s /* InfoPlist.strings */ = {\n\t\t\tisa = PBXVariantGroup;\n\t\t\tchildren = (\n%s\t\t\t);\n\t\t\tname = InfoPlist.strings;\n\t\t\tsourceTree = \"<group>\";\n\t\t};\n"
+        % (vg, "".join("\t\t\t\t%s /* %s */,\n" % (r, l) for r, l in refs)),
+        1,
+    )
+    # Runner grubu ve kaynak derleme adımı.
+    pbx = re.sub(
+        r"(/\* Runner \*/ = \{\s*isa = PBXGroup;\s*children = \()",
+        lambda m: m.group(1) + "\n\t\t\t\t%s /* InfoPlist.strings */," % vg,
+        pbx,
+        count=1,
+    )
+    # Runner hedefinin kaynak adımı (Main.storyboard'u içeren; RunnerTests değil).
+    for m in re.finditer(r"/\* Resources \*/ = \{\s*isa = PBXResourcesBuildPhase;\s*buildActionMask = \d+;\s*files = \(([^)]*)\)", pbx):
+        if "Main.storyboard in Resources" in m.group(1):
+            pbx = pbx[: m.start(1)] + "\n\t\t\t\t%s /* InfoPlist.strings in Resources */," % bf + pbx[m.start(1) :]
+            break
+    m = re.search(r"knownRegions = \(([^)]*)\);", pbx)
+    if m:
+        have = set(x.strip().strip('"') for x in m.group(1).replace("\n", " ").split(",") if x.strip())
+        add = "".join('\t\t\t\t%s,\n' % ('"%s"' % l if "-" in l else l) for l, _ in MIC_TEXTS if l not in have)
+        body = m.group(1).rstrip() + "\n"
+        pbx = pbx[: m.start(1)] + body + add + "\t\t\t" + pbx[m.end(1) :] if add else pbx
+    return pbx
 
 
 def web():

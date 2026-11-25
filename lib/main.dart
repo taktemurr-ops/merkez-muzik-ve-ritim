@@ -9,7 +9,9 @@ import 'package:oyun_makam_yolculugu/oyun_makam_yolculugu.dart';
 import 'package:oyun_melodi_hafizasi/oyun_melodi_hafizasi.dart';
 import 'package:oyun_nota_karolari/oyun_nota_karolari.dart';
 import 'package:oyun_nota_ogrenme/oyun_nota_ogrenme.dart';
+import 'package:oyun_ritim_diktesi/oyun_ritim_diktesi.dart';
 import 'package:oyun_ritim_vurusu/oyun_ritim_vurusu.dart';
+import 'package:oyun_ton_tutma/oyun_ton_tutma.dart';
 import 'package:studio_core/app/approved_hub.dart';
 import 'package:studio_core/app/hub.dart';
 
@@ -98,6 +100,8 @@ final hubConfig = HubConfig(
     davulDersiConfig,
     ezgiBahcesiConfig,
     kulakEgitimiConfig,
+    ritimDiktesiConfig,
+    tonTutmaConfig,
     makamYolculuguConfig,
     akortConfig,
     gitarAkorlariConfig,
@@ -112,6 +116,8 @@ final hubConfig = HubConfig(
     'oyun-davul-dersi': GameCover('drumc'),
     'oyun-ezgi-bahcesi': GameCover('gardenc'),
     'oyun-kulak-egitimi': GameCover('earc'),
+    'oyun-ritim-diktesi': GameCover('staffc', v: 2),
+    'oyun-ton-tutma': GameCover('akortc', v: 2),
     'oyun-makam-yolculugu': GameCover('makamc'),
     'oyun-akort': GameCover('akortc'),
     'oyun-gitar-akorlari': GameCover('guitarc'),
@@ -230,7 +236,7 @@ final hubConfig = HubConfig(
           'Học',
           'Matuto',
         ],
-        ids: ['oyun-kulak-egitimi', 'oyun-makam-yolculugu', 'oyun-akort', 'oyun-gitar-akorlari', 'oyun-nota-ogrenme', 'oyun-melodi-hafizasi']),
+        ids: ['oyun-kulak-egitimi', 'oyun-ritim-diktesi', 'oyun-ton-tutma', 'oyun-makam-yolculugu', 'oyun-akort', 'oyun-gitar-akorlari', 'oyun-nota-ogrenme', 'oyun-melodi-hafizasi']),
   ],
 );
 

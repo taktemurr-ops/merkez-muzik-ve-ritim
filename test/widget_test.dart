@@ -11,6 +11,8 @@ void main() {
       'oyun-davul-dersi',
       'oyun-ezgi-bahcesi',
       'oyun-kulak-egitimi',
+      'oyun-ritim-diktesi',
+      'oyun-ton-tutma',
       'oyun-makam-yolculugu',
       'oyun-akort',
       'oyun-gitar-akorlari',

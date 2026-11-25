@@ -1,6 +1,6 @@
 # Gizlilik Politikası · Privacy Policy — Müzik ve Ritim / Music & Rhythm
 
-_Son güncelleme / Last updated: 2026-11-22_
+_Son güncelleme / Last updated: 2026-11-25_
 
 ## Türkçe
 - Oyunlar internet olmadan tamamen oynanabilir. İlerlemeniz yalnızca **cihazınızda** saklanır.
@@ -10,6 +10,7 @@ _Son güncelleme / Last updated: 2026-11-22_
 - Anonim kullanım verisi (ör. "bölüm tamamlandı") kişisel kimlik içermez.
 - Uygulama içi satın almalar Google Play / App Store üzerinden yapılır; ödeme bilgilerinizi görmeyiz. Satın aldığınız "Reklamsız" ve "Premium" uygulamadaki tüm oyunlarda geçerlidir.
 - Ayarlar → "Tüm verilerimi sil" ile cihazdaki tüm verileri silebilirsiniz.
+- **Mikrofon** yalnızca Ton Tutma oyununda, siz başlatınca ve önce uygulama içi açıklama gösterilerek kullanılır. Ses yalnızca perdeyi ölçmek için anlık işlenir; **kaydedilmez, saklanmaz ve cihazdan çıkmaz**. Mikrofon izni vermeden de oyun kaydırıcıyla oynanabilir.
 - Kumar, şans oyunu veya 18+ içerik yoktur.
 
 ## English
@@ -20,6 +21,7 @@ _Son güncelleme / Last updated: 2026-11-22_
 - Anonymous usage data (e.g. "level completed") contains no personal identifiers.
 - In-app purchases are processed by Google Play / App Store; we never see payment details. "Remove ads" and "Premium" apply to every game in the app.
 - Settings → "Delete all my data" removes all data stored on the device.
+- The **microphone** is used only in Pitch Match, after you start it and after an in-app explanation. Audio is processed live solely to measure pitch; it is **never recorded, stored or sent off the device**. Without microphone permission the game can be played with a slider.
 - No gambling, games of chance or 18+ content.
 
 İletişim / Contact: (yayıncı e-posta adresi / publisher e-mail)
