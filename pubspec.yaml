@@ -13,60 +13,60 @@ dependencies:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: a2d05c02f4fa6a3fa8fe9a28a1d19578c0d9b1ec
+      ref: 8cb935c63a86ca3e5fb38758edd5bb8ec44dccdd
   # Merkezdeki oyunlar (her biri kendi deposunda)
   oyun_gunluk_ritim:
     git:
       url: https://github.com/taktemurr-ops/oyun-gunluk-ritim
-      ref: 79d2497cb6dbecdc5891d60a6fc5c8359b7d6c86
+      ref: a5c7e3c4227e765d4b3aa5836167885135ca78b9
   oyun_nota_karolari:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-karolari
-      ref: 1d8edfb881244950e2ca12f61b371bee9bc6a94f
+      ref: e70929bcd2d5a3a0780a2b3826227309e9cfda62
   oyun_ritim_vurusu:
     git:
       url: https://github.com/taktemurr-ops/oyun-ritim-vurusu
-      ref: 4ae5c465407846feaeb97c8ddb254d0870b45139
+      ref: 6e9f4dc274e70952ad2302e55f8a1749bc00d29c
   oyun_davul_dersi:
     git:
       url: https://github.com/taktemurr-ops/oyun-davul-dersi
-      ref: a59116ea4e2873ee81f3ee20015eceb1e2bea354
+      ref: c32d53c4c20d9e58511e5ea8440638c151413ba7
   oyun_ezgi_bahcesi:
     git:
       url: https://github.com/taktemurr-ops/oyun-ezgi-bahcesi
-      ref: 906bdd2b62ae8a34742a4bbd7fe674ad81dfcec4
+      ref: ddd38c5d772eb7518ed068f1d885ff8403c02d08
   oyun_kulak_egitimi:
     git:
       url: https://github.com/taktemurr-ops/oyun-kulak-egitimi
-      ref: dcf0234145304c5a4dbaf808b4656bc1a7fedf1b
+      ref: 4f2a3fc78aeaaf4cd70284cf4ca26e24e9f179ec
   oyun_ritim_diktesi:
     git:
       url: https://github.com/taktemurr-ops/oyun-ritim-diktesi
-      ref: e82d2a030a13646232eb5d6f3591dcbcaa18e61d
+      ref: e2a2812aced73668932c8d4580ebbdcb007db840
   oyun_ton_tutma:
     git:
       url: https://github.com/taktemurr-ops/oyun-ton-tutma
-      ref: ce2c4239b839ef16b4f883ba76448014c5d50661
+      ref: 66629ebb560f4cae190271ebaa87543e211cb02d
   oyun_makam_yolculugu:
     git:
       url: https://github.com/taktemurr-ops/oyun-makam-yolculugu
-      ref: ede9407d73d12d159820419c6918724bd03d7939
+      ref: 83e7e53b37dd8768710cb10f036ce156632ea214
   oyun_akort:
     git:
       url: https://github.com/taktemurr-ops/oyun-akort
-      ref: f29dd479af53930489a8b5f1104d2492f89ead8e
+      ref: 43655b82ff0dd2faedf1e9a47a225d1ab809831f
   oyun_gitar_akorlari:
     git:
       url: https://github.com/taktemurr-ops/oyun-gitar-akorlari
-      ref: 705a026c0ac65b22a11d82d108628bb02a01425a
+      ref: dab17ca54cfc7cbe674ea88a6861a7430a336ddb
   oyun_nota_ogrenme:
     git:
       url: https://github.com/taktemurr-ops/oyun-nota-ogrenme
-      ref: 99ae346dc4706a12a1fb7d3ad29b667682069be9
+      ref: f6b86415db18252380b4426776f364925f5b8346
   oyun_melodi_hafizasi:
     git:
       url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
-      ref: 6df47a1cab2eceaf2fdd38b859c958c9eb5c2cc8
+      ref: ab780e2e68a6d6959b4d177f4b9460ada02a0f7b
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
@@ -80,11 +80,11 @@ dependency_overrides:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: a2d05c02f4fa6a3fa8fe9a28a1d19578c0d9b1ec
+      ref: 8cb935c63a86ca3e5fb38758edd5bb8ec44dccdd
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
-      ref: 146574fccd55a15b66759677e8697df398bd9b27
+      ref: cfc4f9d79074f8d6210db59df16324566e4910aa
 
 dev_dependencies:
   flutter_test:
