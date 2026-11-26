@@ -1,8 +1,8 @@
-Music & Rhythm brings 11 music games into one app: play public-domain classics on falling tiles, keep time with freshly generated songs, learn drum and darbuka grooves from rock to odd meters, train your ear with intervals and chords, build guitar chords on the fretboard, read notes on treble and bass clef, and test your memory in the melody flower. A metronome, a free-play instrument (piano, drums, chords, with record and playback), practice mode and audio-delay calibration are in every game. Beats are also shown with light and vibration, so rhythm can be followed without hearing.
+Music & Rhythm brings 17 music games into one app: play public-domain classics on falling tiles, keep time with freshly generated songs, learn drum and darbuka grooves from rock to odd meters, train your ear with intervals and chords, build guitar chords on the fretboard, read notes on treble and bass clef, and test your memory in the melody flower. A metronome, a free-play instrument (piano, drums, chords, with record and playback), practice mode and audio-delay calibration are in every game. Beats are also shown with light and vibration, so rhythm can be followed without hearing.
 
 • Every day: Daily Rhythm
-• Play: Note Tiles, Rhythm Rings, Drum Lessons, Melody Garden
-• Learn: Ear Training, Makam Journey, Tune Up, Guitar Chords, Sight-Reading Drill, Melody Memory
+• Play: Note Tiles, Rhythm Rings, Drum Lessons, Melody Garden, Rhythm Run, Usul and Tala, Kalimba and Gamelan
+• Learn: Ear Training, Rhythm Dictation, Pitch Match, Makam Journey, Tune Up, Guitar Chords, Sight-Reading Drill, Melody Memory, Melody Puzzle
 
 Highlights
 • 100,000 levels per game; melodies, rhythms and questions are generated and every level is checked. No copyrighted songs: the classics predate 1929.

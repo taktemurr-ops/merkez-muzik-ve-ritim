@@ -1,6 +1,6 @@
 # Müzik ve Ritim · Music & Rhythm (merkez-muzik-ve-ritim)
 
-Müzik ve Ritim ailesinin **merkez uygulaması**: 13 oyunu tek mağaza uygulamasında toplar. Her oyun kendi deposundadır; ortak motor [muzik-motoru](https://github.com/taktemurr-ops/muzik-motoru), ortak çekirdek [studio-core](https://github.com/taktemurr-ops/studio-core).
+Müzik ve Ritim ailesinin **merkez uygulaması**: 17 oyunu tek mağaza uygulamasında toplar. Her oyun kendi deposundadır; ortak motor [muzik-motoru](https://github.com/taktemurr-ops/muzik-motoru), ortak çekirdek [studio-core](https://github.com/taktemurr-ops/studio-core).
 
 Telifli şarkı yoktur: Nota Karoları'ndaki klasikler 1929 öncesi eserler ve halk ezgileridir, diğer bütün ezgi ve ritimler oyun içinde üretilir. Sesler (piyano, gitar akorları, davul ve darbuka, metronom) `tool/generate_assets.py` ile kodla sentezlenir.
 
@@ -19,5 +19,9 @@ Telifli şarkı yoktur: Nota Karoları'ndaki klasikler 1929 öncesi eserler ve h
 | Gitar Akorları | [oyun-gitar-akorlari](https://github.com/taktemurr-ops/oyun-gitar-akorlari) |
 | Deşifre Antrenmanı | [oyun-nota-ogrenme](https://github.com/taktemurr-ops/oyun-nota-ogrenme) |
 | Melodi Hafızası | [oyun-melodi-hafizasi](https://github.com/taktemurr-ops/oyun-melodi-hafizasi) |
+| Ritim Koşusu | [oyun-ritim-kosusu](https://github.com/taktemurr-ops/oyun-ritim-kosusu) |
+| Usul ve Tala | [oyun-usul-ve-tala](https://github.com/taktemurr-ops/oyun-usul-ve-tala) |
+| Kalimba ve Gamelan | [oyun-kalimba-gamelan](https://github.com/taktemurr-ops/oyun-kalimba-gamelan) |
+| Melodi Bulmacası | [oyun-melodi-bulmacasi](https://github.com/taktemurr-ops/oyun-melodi-bulmacasi) |
 
 Test APK: https://github.com/taktemurr-ops/merkez-muzik-ve-ritim/releases/download/test/merkez-muzik-ve-ritim.apk

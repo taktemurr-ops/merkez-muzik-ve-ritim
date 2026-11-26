@@ -13,7 +13,7 @@ dependencies:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 5eedc912719ebc306e3cd9e5e9b251efe4399105
+      ref: af82ca8814c5123a77f7b20744e18adcb47c874e
   # Merkezdeki oyunlar (her biri kendi deposunda)
   oyun_gunluk_ritim:
     git:
@@ -67,6 +67,22 @@ dependencies:
     git:
       url: https://github.com/taktemurr-ops/oyun-melodi-hafizasi
       ref: ab780e2e68a6d6959b4d177f4b9460ada02a0f7b
+  oyun_ritim_kosusu:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-ritim-kosusu
+      ref: 9c6116069ef1f02d3f6bf6063cdc6789eda17b73
+  oyun_usul_ve_tala:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-usul-ve-tala
+      ref: 2ecdb8562b888662b21a5707cd7dcfa67c6ee7fd
+  oyun_kalimba_gamelan:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-kalimba-gamelan
+      ref: 6e4cd951d5378626626cc85ece325f1e5209bd30
+  oyun_melodi_bulmacasi:
+    git:
+      url: https://github.com/taktemurr-ops/oyun-melodi-bulmacasi
+      ref: b9c125c451ffbcf4087cbf48f51fc8515649f337
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
@@ -80,11 +96,11 @@ dependency_overrides:
   studio_core:
     git:
       url: https://github.com/taktemurr-ops/studio-core
-      ref: 5eedc912719ebc306e3cd9e5e9b251efe4399105
+      ref: af82ca8814c5123a77f7b20744e18adcb47c874e
   muzik_motoru:
     git:
       url: https://github.com/taktemurr-ops/muzik-motoru
-      ref: cfc4f9d79074f8d6210db59df16324566e4910aa
+      ref: 95995e205ddadc82c9cdcbdfe043dde6e531624c
 
 dev_dependencies:
   flutter_test:

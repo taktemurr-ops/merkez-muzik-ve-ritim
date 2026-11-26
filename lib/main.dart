@@ -4,14 +4,18 @@ import 'package:oyun_davul_dersi/oyun_davul_dersi.dart';
 import 'package:oyun_ezgi_bahcesi/oyun_ezgi_bahcesi.dart';
 import 'package:oyun_gitar_akorlari/oyun_gitar_akorlari.dart';
 import 'package:oyun_gunluk_ritim/oyun_gunluk_ritim.dart';
+import 'package:oyun_kalimba_gamelan/oyun_kalimba_gamelan.dart';
 import 'package:oyun_kulak_egitimi/oyun_kulak_egitimi.dart';
 import 'package:oyun_makam_yolculugu/oyun_makam_yolculugu.dart';
+import 'package:oyun_melodi_bulmacasi/oyun_melodi_bulmacasi.dart';
 import 'package:oyun_melodi_hafizasi/oyun_melodi_hafizasi.dart';
 import 'package:oyun_nota_karolari/oyun_nota_karolari.dart';
 import 'package:oyun_nota_ogrenme/oyun_nota_ogrenme.dart';
 import 'package:oyun_ritim_diktesi/oyun_ritim_diktesi.dart';
+import 'package:oyun_ritim_kosusu/oyun_ritim_kosusu.dart';
 import 'package:oyun_ritim_vurusu/oyun_ritim_vurusu.dart';
 import 'package:oyun_ton_tutma/oyun_ton_tutma.dart';
+import 'package:oyun_usul_ve_tala/oyun_usul_ve_tala.dart';
 import 'package:studio_core/app/approved_hub.dart';
 import 'package:studio_core/app/hub.dart';
 
@@ -107,6 +111,10 @@ final hubConfig = HubConfig(
     gitarAkorlariConfig,
     notaOgrenmeConfig,
     melodiHafizasiConfig,
+    ritimKosusuConfig,
+    usulTalaConfig,
+    kalimbaGamelanConfig,
+    melodiBulmacasiConfig,
   ],
   starters: ['oyun-gunluk-ritim', 'oyun-nota-karolari', 'oyun-davul-dersi'],
   covers: const {
@@ -123,6 +131,10 @@ final hubConfig = HubConfig(
     'oyun-gitar-akorlari': GameCover('guitarc'),
     'oyun-nota-ogrenme': GameCover('staffc'),
     'oyun-melodi-hafizasi': GameCover('melodyc'),
+    'oyun-ritim-kosusu': GameCover('rhythmrunc'),
+    'oyun-usul-ve-tala': GameCover('usulc'),
+    'oyun-kalimba-gamelan': GameCover('kalimbac'),
+    'oyun-melodi-bulmacasi': GameCover('melpuzc'),
   },
   defaultCover: const GameCover('beatc', v: 1),
   sections: [
@@ -199,7 +211,7 @@ final hubConfig = HubConfig(
           'Chơi',
           'Tumugtog',
         ],
-        ids: ['oyun-nota-karolari', 'oyun-ritim-vurusu', 'oyun-davul-dersi', 'oyun-ezgi-bahcesi']),
+        ids: ['oyun-nota-karolari', 'oyun-ritim-vurusu', 'oyun-davul-dersi', 'oyun-ezgi-bahcesi', 'oyun-ritim-kosusu', 'oyun-usul-ve-tala', 'oyun-kalimba-gamelan']),
     HubSection(
         title: [
           'Öğren',
@@ -236,7 +248,7 @@ final hubConfig = HubConfig(
           'Học',
           'Matuto',
         ],
-        ids: ['oyun-kulak-egitimi', 'oyun-ritim-diktesi', 'oyun-ton-tutma', 'oyun-makam-yolculugu', 'oyun-akort', 'oyun-gitar-akorlari', 'oyun-nota-ogrenme', 'oyun-melodi-hafizasi']),
+        ids: ['oyun-kulak-egitimi', 'oyun-ritim-diktesi', 'oyun-ton-tutma', 'oyun-makam-yolculugu', 'oyun-akort', 'oyun-gitar-akorlari', 'oyun-nota-ogrenme', 'oyun-melodi-hafizasi', 'oyun-melodi-bulmacasi']),
   ],
 );
 

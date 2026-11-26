@@ -18,6 +18,10 @@ void main() {
       'oyun-gitar-akorlari',
       'oyun-nota-ogrenme',
       'oyun-melodi-hafizasi',
+      'oyun-ritim-kosusu',
+      'oyun-usul-ve-tala',
+      'oyun-kalimba-gamelan',
+      'oyun-melodi-bulmacasi',
     ]);
     final all = hubConfig.allGames.map((g) => g.gameId).toList();
     expect(all.length, ids.length + 0);
